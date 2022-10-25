@@ -151,7 +151,10 @@ Blockly.Arduino.Boards.profiles.model_nano = {
   compilerFlag: 'arduino:avr:modelnano',
   analogPins: Blockly.Arduino.Boards.generateAnalogIo(0, 4).concat(
     Blockly.Arduino.Boards.generateAnalogIo(7, 7)),
-  digitalPins: Blockly.Arduino.Boards.generateDigitalIo(2, 3),
+  digitalPins: Blockly.Arduino.Boards.generateDigitalIo(0, 4).concat(
+    Blockly.Arduino.Boards.generateDigitalIo(9, 11).concat(
+      Blockly.Arduino.Boards.generateDigitalIo(14, 19)
+    )),
   pwmPins: Blockly.Arduino.Boards.profiles.uno.pwmPins,
   serial: Blockly.Arduino.Boards.profiles.uno.serial,
   serialPins: Blockly.Arduino.Boards.profiles.uno.serialPins,
@@ -169,7 +172,39 @@ Blockly.Arduino.Boards.profiles.model_nano = {
   oledcol: [['0', '0'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5']],
   oledmode: [["0", "0"], ["1", "1"], ["2", "2"], ["3", "3"]],
   oledtextsize: [["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"]],
-  servoport: [["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"]],
+  servoport: [["1", "1"], ["2", "2"], ["3", "3"]],
+  motorport: [["1", "1"], ["2", "2"]],
+};        
+
+/** Model Nano with Friend Robot */
+Blockly.Arduino.Boards.profiles.model_pro = {
+  name: 'Model Pro (Friend Robot)',
+  description: 'Model Pro from Friend Robot',
+  compilerFlag: 'arduino:avr:modelpro',
+  analogPins: Blockly.Arduino.Boards.generateAnalogIo(0, 14),
+  digitalPins: Blockly.Arduino.Boards.generateDigitalIo(2, 3).concat(
+    Blockly.Arduino.Boards.generateDigitalIo(18, 19).concat(
+      Blockly.Arduino.Boards.generateDigitalIo(47, 52)
+  )),
+  pwmPins: Blockly.Arduino.Boards.profiles.uno.pwmPins,
+  serial: Blockly.Arduino.Boards.profiles.uno.serial,
+  serialPins: Blockly.Arduino.Boards.profiles.uno.serialPins,
+  serialSpeed: Blockly.Arduino.Boards.profiles.uno.serialSpeed,
+  spi: Blockly.Arduino.Boards.profiles.uno.spi,
+  spiPins: Blockly.Arduino.Boards.profiles.uno.spiPins,
+  spiClockDivide: Blockly.Arduino.Boards.profiles.uno.spiClockDivide,
+  i2c: Blockly.Arduino.Boards.profiles.uno.i2c,
+  i2cPins: Blockly.Arduino.Boards.profiles.uno.i2cPins,
+  i2cSpeed: Blockly.Arduino.Boards.profiles.uno.i2cSpeed,
+  builtinLed: Blockly.Arduino.Boards.profiles.uno.builtinLed,
+  interrupt: Blockly.Arduino.Boards.profiles.uno.interrupt,
+  oledtype: [["Decimal", "%d"], ["Float", "%f"], ["Long", "%l"], ["Hex", "%h"],["Character", "%c"]],
+  oledrow: [['0', '0'], ['10', '10'], ['20', '20'], ['30', '30'], ['40', '40'], ['50', '50']],
+  oledcol: [['0', '0'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5']],
+  oledmode: [["0", "0"], ["1", "1"], ["2", "2"], ["3", "3"]],
+  oledtextsize: [["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"]],
+  servoport: [["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"], ["6", "6"], ["7", "7"], ["8", "8"]],
+  motorport: [["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"]],
 };        
 
 /** Arduino Duemilanove boards profile (ATmega168p, ATmega328p). */

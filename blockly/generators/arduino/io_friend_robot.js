@@ -108,3 +108,17 @@ Blockly.Arduino['read_knob'] = function (block) {
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
+
+/**
+ * Function for reading a digital pin (X).
+ * Arduino code: setup { pinMode(X, INPUT); }
+ *               loop  { digitalRead(X)     }
+ * @param {!Blockly.Block} block Block to generate the code from.
+ * @return {string} Completed code with order of operation.
+ */
+ Blockly.Arduino['beep'] = function (block) {
+  // TODO: Assemble JavaScript into code variable.
+  var code = 'beep();\n';
+  // TODO: Change ORDER_NONE to the correct strength.
+  return code;
+};

@@ -277,6 +277,7 @@ Ardublockly.TOOLBOX_XML =
 '        </block>' +
 '      </value>' +
 '    </block>' +
+'    <block type="beep"></block>' +
 '  </category>' +
 '  <sep></sep>' +
 '  <category id="catOLED" name="OLED (Friend Robot)">' +
@@ -289,5 +290,6 @@ Ardublockly.TOOLBOX_XML =
 '  <sep></sep>' +
 '  <category id="catFriendRobot" name="Friend Robot Setup">' +
 '    <block type="setup_modelnano"></block>' +
+'    <block type="setup_modelpro"></block>' +
 '  </category>' +
 '</xml>';

@@ -146,3 +146,20 @@ Blockly.Blocks['read_knob'] = {
     this.setHelpUrl("");
   }
 };
+
+Blockly.Blocks['beep'] = {
+  /**
+   * Block for creating a 'read pin'.
+   * @this Blockly.Block
+   */
+  init: function () {
+    this.setHelpUrl('');
+    this.setColour(Blockly.Blocks.io.HUE);
+    this.appendDummyInput()
+      .appendField('Beep sound')
+    this.setColour(Blockly.Blocks.io.HUE);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip();
+  }
+};

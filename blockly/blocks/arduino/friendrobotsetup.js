@@ -32,3 +32,20 @@ Blockly.Blocks['setup_modelnano'] = {
  this.setHelpUrl("");
   }
 };
+
+Blockly.Blocks['setup_modelpro'] = {
+  /**
+   * Block for defining the Arduino setup() and loop() functions.
+   * @this Blockly.Block
+   */
+   init: function() {
+    this.appendDummyInput()
+        .appendField("Friend Robot Model Pro Setup");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(120);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};

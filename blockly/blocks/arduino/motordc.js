@@ -24,7 +24,7 @@ Blockly.Blocks['motor_dc'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("Motor Port")
-        .appendField(new Blockly.FieldDropdown([["1","1"], ["2","2"], ["3","3"], ["4","4"]]), "PORT_MOTORDC");
+        .appendField(new Blockly.FieldDropdown(Blockly.Arduino.Boards.selected.motorport || [['1','1'],['2','2']]), "PORT_MOTORDC");
     this.appendValueInput("POWER_MOTORDC")
         .setCheck(Blockly.Types.NUMBER.checkList)
         .appendField("at");
