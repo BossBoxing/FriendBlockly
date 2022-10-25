@@ -114,6 +114,8 @@ Blockly.Arduino.Boards.profiles.uno = {
   interrupt: [['interrupt0', '2'], ['interrupt1', '3']]
 };
 
+
+
 /** Arduino Nano board profile (ATmega328p). */
 Blockly.Arduino.Boards.profiles.nano_328 = {
   name: 'Arduino Nano 328',
@@ -141,6 +143,34 @@ Blockly.Arduino.Boards.profiles.nano_168 =
         'Arduino Nano 168',
         'Arduino Nano with ATmega168 compatible board',
         'arduino:avr:nano:cpu=atmega168');
+
+/** Model Nano with Friend Robot */
+Blockly.Arduino.Boards.profiles.model_nano = {
+  name: 'Model Nano (Friend Robot)',
+  description: 'Model Nano from Friend Robot',
+  compilerFlag: 'arduino:avr:modelnano',
+  analogPins: Blockly.Arduino.Boards.generateAnalogIo(0, 4).concat(
+    Blockly.Arduino.Boards.generateAnalogIo(7, 7)),
+  digitalPins: Blockly.Arduino.Boards.generateDigitalIo(2, 3),
+  pwmPins: Blockly.Arduino.Boards.profiles.uno.pwmPins,
+  serial: Blockly.Arduino.Boards.profiles.uno.serial,
+  serialPins: Blockly.Arduino.Boards.profiles.uno.serialPins,
+  serialSpeed: Blockly.Arduino.Boards.profiles.uno.serialSpeed,
+  spi: Blockly.Arduino.Boards.profiles.uno.spi,
+  spiPins: Blockly.Arduino.Boards.profiles.uno.spiPins,
+  spiClockDivide: Blockly.Arduino.Boards.profiles.uno.spiClockDivide,
+  i2c: Blockly.Arduino.Boards.profiles.uno.i2c,
+  i2cPins: Blockly.Arduino.Boards.profiles.uno.i2cPins,
+  i2cSpeed: Blockly.Arduino.Boards.profiles.uno.i2cSpeed,
+  builtinLed: Blockly.Arduino.Boards.profiles.uno.builtinLed,
+  interrupt: Blockly.Arduino.Boards.profiles.uno.interrupt,
+  oledtype: [["Decimal", "%d"], ["Float", "%f"], ["Long", "%l"], ["Hex", "%h"],["Character", "%c"]],
+  oledrow: [['0', '0'], ['10', '10'], ['20', '20'], ['30', '30'], ['40', '40'], ['50', '50']],
+  oledcol: [['0', '0'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5']],
+  oledmode: [["0", "0"], ["1", "1"], ["2", "2"], ["3", "3"]],
+  oledtextsize: [["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"]],
+  servoport: [["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"]],
+};        
 
 /** Arduino Duemilanove boards profile (ATmega168p, ATmega328p). */
 Blockly.Arduino.Boards.profiles.duemilanove_168p = {

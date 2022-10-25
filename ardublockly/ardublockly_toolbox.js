@@ -120,7 +120,8 @@ Ardublockly.TOOLBOX_XML =
 '    <block type="variables_set_type"></block>' +
 '  </category>' +
 '  <sep></sep>' +
-'  <category id="catFunctions" name="Functions" custom="PROCEDURE"></category>' +
+'  <category id="catFunctions" name="Functions" custom="PROCEDURE">' +
+'  </category>' +
 '  <sep></sep>' +
 '  <category id="catInputOutput" name="Input/Output">' +
 '    <block type="io_digitalwrite">' +
@@ -230,5 +231,63 @@ Ardublockly.TOOLBOX_XML =
 '    <block type="spi_setup"></block>' +
 '    <block type="spi_transfer"></block>' +
 '    <block type="spi_transfer_return"></block>' +
+'  </category>' +
+'  <sep></sep>' +
+'  <category id="catIO" name="IO (Friend Robot)">' +
+'    <block type="io_out">' +
+'      <value name="STATE">' +
+'        <block type="io_highlow"></block>' +
+'      </value>' +
+'    </block>' +
+'    <block type="io_in"></block>' +
+'    <block type="io_analog"></block>' +
+'    <block type="read_sw_ok"></block>' +
+'    <block type="read_knob">' +
+'      <value name="min">' +
+'        <block type="math_number">' +
+'          <field name="NUM">0</field>' +
+'        </block>' +
+'      </value>' +
+'      <value name="max">' +
+'        <block type="math_number">' +
+'          <field name="NUM">1</field>' +
+'        </block>' +
+'      </value>' +
+'    </block>' +
+'  </category>' +
+'  <sep></sep>' +
+'  <category id="catSensor" name="Sensor (Friend Robot)">' +
+'    <block type="encoder_read"></block>' +
+'    <block type="getdist"></block>' +
+'  </category>' +
+'  <sep></sep>' +
+'  <category id="catMotorDC" name="Output (Friend Robot)">' +
+'    <block type="motor_dc">' +
+'      <field name="PORT_MOTORDC">1</field>' +
+'      <value name="POWER_MOTORDC">' +
+'        <block type="math_number">' +
+'          <field name="NUM">0</field>' +
+'        </block>' +
+'      </value>' +
+'    </block>' +
+'    <block type="servo_set">' +
+'      <value name="SERVO_ANGLE">' +
+'        <block type="math_number">' +
+'          <field name="NUM">90</field>' +
+'        </block>' +
+'      </value>' +
+'    </block>' +
+'  </category>' +
+'  <sep></sep>' +
+'  <category id="catOLED" name="OLED (Friend Robot)">' +
+'    <block type="oledmode"></block>' +
+'    <block type="oled_set_text_size"></block>' +
+'    <block type="oled_text"></block>' +
+'    <block type="oled_variable_text"></block>' +
+'    <block type="oled_clear"></block>' +
+'  </category>' +
+'  <sep></sep>' +
+'  <category id="catFriendRobot" name="Friend Robot Setup">' +
+'    <block type="setup_modelnano"></block>' +
 '  </category>' +
 '</xml>';

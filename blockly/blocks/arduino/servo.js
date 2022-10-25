@@ -82,3 +82,36 @@ Blockly.Blocks['servo_read'] = {
         this, 'SERVO_PIN', 'digitalPins');
   }
 };
+
+Blockly.Blocks['servo_set'] = {
+  /**
+   * Block for writing an angle value into a servo pin.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.setHelpUrl('http://arduino.cc/en/Reference/ServoWrite');
+    this.setColour(Blockly.Blocks.servo.HUE);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.ARD_SERVO_WRITE)
+        .appendField(new Blockly.FieldDropdown(
+            Blockly.Arduino.Boards.profiles.model_nano.servoport), 'SERVO_PIN');
+    this.setInputsInline(false);
+    this.appendValueInput('SERVO_ANGLE')
+        .setCheck(Blockly.Types.NUMBER.checkList)
+        .appendField(Blockly.Msg.ARD_SERVO_WRITE_TO);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.ARD_SERVO_WRITE_DEG_180);
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.ARD_SERVO_WRITE_TIP);
+  },
+  /**
+   * Updates the content of the the pin related fields.
+   * @this Blockly.Block
+   */
+  updateFields: function() {
+    Blockly.Arduino.Boards.refreshBlockFieldDropdown(
+        this, 'SERVO_PIN', 'digitalPins');
+  }
+};
