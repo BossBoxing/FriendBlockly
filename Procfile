@@ -1,2 +1,1 @@
-web: friendblockly
-worker: start.py
+worker: python start.py
