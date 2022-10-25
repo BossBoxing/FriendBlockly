@@ -85,7 +85,7 @@ if py3k:
     urlunquote = functools.partial(urlunquote, encoding='latin1')
     from http.cookies import SimpleCookie
     from collections.abc import MutableMapping as DictMixin
-    #from collections import MutableMapping as DictMixin
+    # from collections import MutableMapping as DictMixin
     import pickle
     from io import BytesIO
     from configparser import ConfigParser
