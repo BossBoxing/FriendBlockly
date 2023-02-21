@@ -17,6 +17,8 @@ Blockly.Blocks['oled_text'] = {
    */
     init: function () {
         this.setColour(190);
+        this.appendDummyInput()
+        .appendField(new Blockly.FieldImage("img/tools/oled.png", 50, 50, { alt: "*", flipRtl: "FALSE" }));
         this.appendDummyInput().appendField("OLED Row:")
             .appendField(new Blockly.FieldDropdown(
                 Blockly.Arduino.Boards.profiles.model_nano.oledrow), 'ROW');
@@ -67,6 +69,8 @@ Blockly.Blocks['oled_set_text_size'] = {
 Blockly.Blocks['oled_variable_text'] = {
     init: function () {
         this.setColour(190);
+        this.appendDummyInput()
+        .appendField(new Blockly.FieldImage("img/tools/oled.png", 50, 50, { alt: "*", flipRtl: "FALSE" }));
         this.appendDummyInput().appendField("OLED Show Value:");
         this.appendValueInput("VARIABLE_SETTYPE_INPUT");
         this.appendDummyInput().appendField(Blockly.Msg.ARD_VAR_AS);

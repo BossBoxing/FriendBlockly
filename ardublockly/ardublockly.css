@@ -35,7 +35,6 @@ body {
   user-select: none;
 }
 
-
 /*********************/
 /*  Arduino Colours  */
 /*********************/
@@ -670,6 +669,19 @@ ul.side-nav li.side-menu-end {
   height: calc(100% - 37px);          /* Standard */
   overflow-x: hidden;
   overflow-y: auto;
+}
+/* Changes color of the icon to white. */
+.customIcon {
+  color: white;
+}
+/* Stacks the icon on top of the label. */
+.blocklyTreeRowContentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.blocklyTreeRow {
+  height: initial;
 }
 .blocklyTreeRow {
   background: none !important;

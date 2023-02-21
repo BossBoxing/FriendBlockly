@@ -23,11 +23,13 @@ Blockly.Blocks['setup_modelnano'] = {
    */
    init: function() {
     this.appendDummyInput()
+        .appendField(new Blockly.FieldImage("img/tools/modelnano.png", 150, 150, { alt: "*", flipRtl: "FALSE" }));
+    this.appendDummyInput()
         .appendField("Friend Robot Model Nano Setup");
-    this.setInputsInline(true);
+    this.setInputsInline(false);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(120);
+    this.setColour(180);
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -40,11 +42,13 @@ Blockly.Blocks['setup_modelpro'] = {
    */
    init: function() {
     this.appendDummyInput()
+        .appendField(new Blockly.FieldImage("img/tools/modelpro.png", 150, 150, { alt: "*", flipRtl: "FALSE" }));
+    this.appendDummyInput()
         .appendField("Friend Robot Model Pro Setup");
-    this.setInputsInline(true);
+    this.setInputsInline(false);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(120);
+    this.setColour(180);
  this.setTooltip("");
  this.setHelpUrl("");
   }

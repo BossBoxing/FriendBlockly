@@ -148,7 +148,7 @@ Blockly.Arduino.Boards.profiles.nano_168 =
 Blockly.Arduino.Boards.profiles.model_nano = {
   name: 'Model Nano (Friend Robot)',
   description: 'Model Nano from Friend Robot',
-  compilerFlag: 'arduino:avr:modelnano',
+  compilerFlag: 'arduino:avr:nano:cpu=atmega328',
   analogPins: Blockly.Arduino.Boards.generateAnalogIo(0, 4).concat(
     Blockly.Arduino.Boards.generateAnalogIo(7, 7)),
   digitalPins: Blockly.Arduino.Boards.generateDigitalIo(0, 4).concat(
@@ -169,18 +169,29 @@ Blockly.Arduino.Boards.profiles.model_nano = {
   interrupt: Blockly.Arduino.Boards.profiles.uno.interrupt,
   oledtype: [["Decimal", "%d"], ["Float", "%f"], ["Long", "%l"], ["Hex", "%h"],["Character", "%c"]],
   oledrow: [['0', '0'], ['10', '10'], ['20', '20'], ['30', '30'], ['40', '40'], ['50', '50']],
-  oledcol: [['0', '0'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5']],
+  oledcol: [['0', '0'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'],
+  ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'],
+  ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'],
+  ['18', '18'], ['19', '19'], ['20', '20']
+  ],
   oledmode: [["0", "0"], ["1", "1"], ["2", "2"], ["3", "3"]],
   oledtextsize: [["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"]],
   servoport: [["1", "1"], ["2", "2"], ["3", "3"]],
   motorport: [["1", "1"], ["2", "2"]],
 };        
 
+Blockly.Arduino.Boards.profiles.model_nano_old =
+    Blockly.Arduino.Boards.duplicateBoardProfile(
+        Blockly.Arduino.Boards.profiles.model_nano,
+        'Model Nano (Friend Robot) Old Bootloader',
+        'Model Nano (Old Bootloader) from Friend Robot',
+        'arduino:avr:modelnano:cpu=atmega328old');      
+
 /** Model Nano with Friend Robot */
 Blockly.Arduino.Boards.profiles.model_pro = {
   name: 'Model Pro (Friend Robot)',
   description: 'Model Pro from Friend Robot',
-  compilerFlag: 'arduino:avr:modelpro',
+  compilerFlag: 'arduino:avr:modelpro:cpu=atmega2560',
   analogPins: Blockly.Arduino.Boards.generateAnalogIo(0, 14),
   digitalPins: Blockly.Arduino.Boards.generateDigitalIo(2, 3).concat(
     Blockly.Arduino.Boards.generateDigitalIo(18, 19).concat(
@@ -200,7 +211,11 @@ Blockly.Arduino.Boards.profiles.model_pro = {
   interrupt: Blockly.Arduino.Boards.profiles.uno.interrupt,
   oledtype: [["Decimal", "%d"], ["Float", "%f"], ["Long", "%l"], ["Hex", "%h"],["Character", "%c"]],
   oledrow: [['0', '0'], ['10', '10'], ['20', '20'], ['30', '30'], ['40', '40'], ['50', '50']],
-  oledcol: [['0', '0'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5']],
+  oledcol: [['0', '0'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'],
+  ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'],
+  ['12', '12'], ['13', '13'], ['14', '14'], ['15', '15'], ['16', '16'], ['17', '17'],
+  ['18', '18'], ['19', '19'], ['20', '20']
+  ],
   oledmode: [["0", "0"], ["1", "1"], ["2", "2"], ["3", "3"]],
   oledtextsize: [["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"]],
   servoport: [["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"], ["6", "6"], ["7", "7"], ["8", "8"]],

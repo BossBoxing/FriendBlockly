@@ -65,8 +65,9 @@ class ServerCompilerSettings(object):
                                'atmel:avr:atmega328pb_xplained_mini',
                        'ESP8266 Huzzah': 'esp8266:esp8266:generic',
                        'ESP8266 WeMos D1': 'esp8266:esp8266:generic',
-                       'Model Nano': 'arduino:avr:modelnano',
-                       'Model Pro': 'arduino:avr:modelpro'}
+                       'Model Nano': 'arduino:avr:modelnano:cpu=atmega328',
+                       'Model Nano (Old Bootloader)': 'arduino:avr:modelnano:cpu=atmega328old',
+                       'Model Pro': 'arduino:avr:modelpro:cpu=atmega2560'}
 
     # Class dictionary to contain the computer COM ports, dynamic content
     __serial_ports = {'port0': 'COM1'}

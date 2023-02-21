@@ -102,4 +102,9 @@ Ardublockly.LOCALISED_TEXT = {
   catAudio: "Audio",
   catMotors: "Motors",
   catComms: "Comms",
+  catIO: "IO (Friend Robot)",
+  catSensor: "Sensor (Friend Robot)",
+  catMotorDC: "Output (Friend Robot)",
+  catOLED: "OLED (Friend Robot)",
+  catFriendRobot: "Friend Robot Setup",
 };

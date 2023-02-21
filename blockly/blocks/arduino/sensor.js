@@ -29,6 +29,8 @@ Blockly.Blocks['encoder_read'] = {
     this.setHelpUrl('');
     this.setColour(Blockly.Blocks.io.HUE);
     this.appendDummyInput()
+        .appendField(new Blockly.FieldImage("img/tools/en.png", 50, 50, { alt: "*", flipRtl: "FALSE" }));
+    this.appendDummyInput()
         .appendField('read encoder')
         .appendField(new Blockly.FieldDropdown(
             Blockly.Arduino.Boards.selected.digitalPins), 'PIN');
@@ -58,9 +60,47 @@ Blockly.Blocks['getdist'] = {
     this.setHelpUrl('');
     this.setColour(Blockly.Blocks.io.HUE);
     this.appendDummyInput()
+        .appendField(new Blockly.FieldImage("img/tools/gp.png", 50, 50, { alt: "*", flipRtl: "FALSE" }));
+    this.appendDummyInput()
         .appendField('read distance')
         .appendField(new Blockly.FieldDropdown(
             Blockly.Arduino.Boards.selected.analogPins), 'PIN');
+    this.setOutput(true, Blockly.Types.NUMBER.output);
+    this.setTooltip(Blockly.Msg.ARD_ANALOGREAD_TIP);
+  },
+  /** @return {!string} The type of return value for the block, an integer. */
+  getBlockType: function() {
+    return Blockly.Types.NUMBER;
+  },
+  /**
+   * Updates the content of the the pin related fields.
+   * @this Blockly.Block
+   */
+  updateFields: function() {
+    Blockly.Arduino.Boards.refreshBlockFieldDropdown(this, 'PIN', 'analogPins');
+  }
+};
+
+Blockly.Blocks['ultrasonic'] = {
+  /**
+   * Block for reading an analogue input.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.setHelpUrl('');
+    this.setColour(Blockly.Blocks.io.HUE);
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldImage("img/tools/ultrasonic.png", 50, 50, { alt: "*", flipRtl: "FALSE" }));
+    this.appendDummyInput()
+        .appendField('read ultrasonic')
+    this.appendDummyInput()
+        .appendField('Trig Pin')
+        .appendField(new Blockly.FieldDropdown(
+            Blockly.Arduino.Boards.selected.digitalPins), 'Trig');
+    this.appendDummyInput()
+            .appendField('Echo Pin')
+            .appendField(new Blockly.FieldDropdown(
+                Blockly.Arduino.Boards.selected.digitalPins), 'Echo');
     this.setOutput(true, Blockly.Types.NUMBER.output);
     this.setTooltip(Blockly.Msg.ARD_ANALOGREAD_TIP);
   },

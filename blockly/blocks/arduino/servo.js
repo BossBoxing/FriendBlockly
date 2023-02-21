@@ -92,10 +92,11 @@ Blockly.Blocks['servo_set'] = {
     this.setHelpUrl('http://arduino.cc/en/Reference/ServoWrite');
     this.setColour(Blockly.Blocks.servo.HUE);
     this.appendDummyInput()
+        .appendField(new Blockly.FieldImage("img/tools/sv.png", 50, 50, { alt: "*", flipRtl: "FALSE" }));
+    this.appendDummyInput()
         .appendField(Blockly.Msg.ARD_SERVO_WRITE)
         .appendField(new Blockly.FieldDropdown(
             Blockly.Arduino.Boards.profiles.model_nano.servoport), 'SERVO_PIN');
-    this.setInputsInline(false);
     this.appendValueInput('SERVO_ANGLE')
         .setCheck(Blockly.Types.NUMBER.checkList)
         .appendField(Blockly.Msg.ARD_SERVO_WRITE_TO);

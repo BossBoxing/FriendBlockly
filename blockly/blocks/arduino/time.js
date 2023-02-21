@@ -27,6 +27,8 @@ Blockly.Blocks['time_delay'] = {
   init: function() {
     this.setHelpUrl('http://arduino.cc/en/Reference/Delay');
     this.setColour(Blockly.Blocks.time.HUE);
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldImage("img/tools/clock.png", 50, 50, { alt: "*", flipRtl: "FALSE" }));
     this.appendValueInput('DELAY_TIME_MILI')
         .setCheck(Blockly.Types.NUMBER.checkList)
         .appendField(Blockly.Msg.ARD_TIME_DELAY);

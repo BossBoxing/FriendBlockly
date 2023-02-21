@@ -50,3 +50,25 @@ Blockly.Arduino['getdist'] = function(block) {
   var code = 'getdist(' + pin + ')';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
+
+/**
+ * Function for reading an analogue pin value (X).
+ * Arduino code: setup { pinMode(X, INPUT); }
+ *               loop  { analogRead(X)      }
+ * @param {!Blockly.Block} block Block to generate the code from.
+ * @return {array} Completed code with order of operation.
+ */
+Blockly.Arduino['ultrasonic'] = function(block) {
+  var pinT = block.getFieldValue('Trig');
+  var pinE = block.getFieldValue('Echo');
+  Blockly.Arduino.reservePin(
+      block, pinT, Blockly.Arduino.PinTypes.INPUT, 'Digital Read');
+  Blockly.Arduino.reservePin(
+        block, pinE, Blockly.Arduino.PinTypes.INPUT, 'Digital Read');
+
+  // var pinSetupCode = 'pinMode(' + pin + ', INPUT);';
+  // Blockly.Arduino.addSetup('io_' + pin, pinSetupCode, false);
+
+  var code = 'ultrasonic(' + pinT + ',' + pinE + ')';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};

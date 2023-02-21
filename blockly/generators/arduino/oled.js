@@ -23,7 +23,7 @@ Blockly.Arduino['oled_text'] = function (block) {
     var a = this.getFieldValue("COL"),
         b = this.getFieldValue("ROW"),
         c = this.getFieldValue("TXT");
-    return "oled(" + b + "," + a + ',"' + c + '");\n'
+    return "oled(" + a + "," + b + ',"' + c + '");\n'
 };
 
 /**
@@ -61,7 +61,7 @@ Blockly.Arduino['oled_variable_text'] = function(a) {
     d=this.getFieldValue("VAR_TYPE"),
     e=this.getFieldValue("PREFIX"),
     f=this.getFieldValue("SUBFIX");
-    return"oled("+b+","+c+',"'+e+d+f+'",'+a+");\n"
+    return"oled("+c+","+b+',"'+e+d+f+'",'+a+");\n"
 };
 
 /**

@@ -115,6 +115,8 @@ Blockly.Blocks['read_sw_ok'] = {
     this.setHelpUrl('');
     this.setColour(Blockly.Blocks.io.HUE);
     this.appendDummyInput()
+        .appendField(new Blockly.FieldImage("img/tools/swok.png", 50, 50, { alt: "*", flipRtl: "FALSE" }));
+    this.appendDummyInput()
       .appendField('Read SW_OK')
     this.setOutput(true, Blockly.Types.BOOLEAN.output);
     this.setTooltip(Blockly.Msg.ARD_DIGITALREAD_TIP);
@@ -131,6 +133,8 @@ Blockly.Blocks['read_knob'] = {
    * @this Blockly.Block
    */
   init: function () {
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldImage("img/tools/knob.png", 50, 50, { alt: "*", flipRtl: "FALSE" }));
     this.appendDummyInput()
       .appendField("Read KNOB");
     this.appendValueInput("min")
@@ -155,6 +159,8 @@ Blockly.Blocks['beep'] = {
   init: function () {
     this.setHelpUrl('');
     this.setColour(Blockly.Blocks.io.HUE);
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldImage("img/tools/beep.png", 50, 50, { alt: "*", flipRtl: "FALSE" }));
     this.appendDummyInput()
       .appendField('Beep sound')
     this.setColour(Blockly.Blocks.io.HUE);
