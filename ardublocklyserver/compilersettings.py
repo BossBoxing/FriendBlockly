@@ -188,7 +188,7 @@ class ServerCompilerSettings(object):
 
         It only accepts letters, numbers, underscores and dashes.
         """
-        if re.match("^[\w\d_-]*$", new_sketch_name):
+        if re.match(r"^[\w\d_-]*$", new_sketch_name):
             self.__sketch_name = new_sketch_name
             print('Sketch name set to:\n\t%s' % self.__sketch_name)
             self.save_settings()
@@ -214,7 +214,7 @@ class ServerCompilerSettings(object):
 
         It only accepts letters, numbers, underscores and dashes.
         """
-        if re.match("^[\w\d_-]*$", new_sketch_name):
+        if re.match(r"^[\w\d_-]*$", new_sketch_name):
             self.__sketch_name = new_sketch_name
         else:
             print('Settings file Sketch name contains invalid characters:'
