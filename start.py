@@ -21,7 +21,7 @@ import ardublocklyserver.server
 import ardublocklyserver.compilersettings
 
 # Server IP and PORT settings
-SERVER_IP = 'localhost'
+SERVER_IP = '0.0.0.0'
 SERVER_PORT = 8000
 
 

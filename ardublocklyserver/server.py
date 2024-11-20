@@ -24,7 +24,7 @@ app = application = default_app()
 document_root = ''
 
 
-def launch_server(ip='localhost', port=8000, document_root_=''):
+def launch_server(ip='0.0.0.0', port=8000, document_root_=''):
     """Launch the Waitress server and Bottle framework with given settings.
 
     :param ip: IP address to serve. Default to localhost, set to '0.0.0.0' to
