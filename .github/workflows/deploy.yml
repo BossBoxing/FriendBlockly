@@ -28,8 +28,8 @@ jobs:
     #     known_hosts: unnecessary
     - name: Build the Docker image
       run: |
-        docker build . --file Dockerfile --tag ghcr.io/bossboxing/FriendBlockly:latest
-        docker push ghcr.io/bossboxing/FriendBlockly:latest
+        docker build . --file Dockerfile --tag ghcr.io/bossboxing/friendblockly:latest
+        docker push ghcr.io/bossboxing/friendblockly:latest
     # - name: Deploy To Server
     #   uses: appleboy/ssh-action@master
     #   with:
