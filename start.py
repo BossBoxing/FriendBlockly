@@ -10,6 +10,7 @@ from __future__ import unicode_literals, absolute_import, print_function
 import os
 import re
 import sys
+sys.path.append(r"C:\Users\admin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages")
 import struct
 import getopt
 import platform
