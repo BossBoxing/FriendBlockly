@@ -174,8 +174,8 @@ def main():
         ardublockly_root_dir)
 
     print('\n======= Starting Server =======')
-    if launch_browser:
-        open_browser(ip=SERVER_IP, port=SERVER_PORT)
+    # if launch_browser:
+    #     open_browser(ip=SERVER_IP, port=SERVER_PORT)
 
     ardublocklyserver.server.launch_server(
             ip=SERVER_IP, port=SERVER_PORT, document_root_=server_root)
